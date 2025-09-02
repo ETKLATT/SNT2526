@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../Images/Lacleman.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+h2 {
+  margin-top: 25px;
+  color: #34495e;
+}
+
+ul,
+ol {
+  margin-left: 25px;
+}
+
+strong {
+  color: #d35400;
+}
+
+.link {
+  margin-top: 30px;
+  font-size: 1.1em;
+}
+
+.link a {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: bold;
+}
+.link a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .home-btn {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+footer .home-btn:hover {
+  color: lightblue;
+}

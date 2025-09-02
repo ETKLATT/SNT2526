@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 1 - Positionnement</title>
+    <link rel="stylesheet" href="CSS/style exercice Bonus GPS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exercice 1 - Positionnement</h1>
+      <p>
+        Le GPS fonctionne avec une constellation de 30 satellites en orbite
+        autour de la Terre. Chaque satellite envoie sur Terre des signaux qui
+        comportent :
+      </p>
+      <ul>
+        <li>la position dans l’espace du satellite</li>
+        <li>l’heure et la date d’émission du signal</li>
+      </ul>
+      <p>
+        La puce GPS (<em>récepteur</em>) se contente de capter ces signaux et en
+        comparant l’heure d’émission du signal avec son horloge interne, elle
+        est capable de connaître le temps mis par le signal pour venir à elle.
+        C’est ce temps de parcours du signal qui est la clé du calcul de
+        distance, puisque la vitesse de propagation est celle de la lumière :
+        <strong>300 000 km/s (3 × 10<sup>5</sup> km/s)</strong>.
+      </p>
+      <p>
+        <strong>Travail demandé :</strong> Calculer une distance à partir d’un
+        temps et d’une vitesse.
+      </p>
+      <ol>
+        <li>
+          Si un signal met 78,5 ms pour aller du satellite au récepteur, à
+          quelle distance du satellite se trouve le récepteur ? Une fois la
+          réponse trouvée pose toi la question de si la réponse est cohérante
+          (avec les informations des vidéo précédante notemment)
+        </li>
+        <li>
+          Un signal émis à 18 h 35 min 24,525 800 s est capté par un récepteur
+          GPS à 18 h 35 min 24,593 650 s. À quelle distance du satellite se
+          trouve le récepteur ?
+        </li>
+      </ol>
+
+      <p class="link">
+        👉 La correction est protégée par un code.<br />
+        Ce code sera donné <strong>10 minutes avant la fin</strong> du cours.<br />
+        ⚠️ Passé ce délai,
+        <strong>les bonus ne seront plus comptabilisés</strong>.
+      </p>
+
+      <div class="code-access">
+        <label for="accessCode">Entrez le code :</label>
+        <input type="text" id="accessCode" placeholder="Code d'accès" />
+        <button onclick="checkCode()">Valider</button>
+        <p id="message"></p>
+      </div>
+
+      <script>
+        const errorMessages = [
+          "❌ Code incorrect. Réessaie.",
+          "🙃 Nope, ce n’est pas ça !",
+          "😂 Tu crois vraiment que ça va marcher ?",
+          "🤔 Réfléchis plutôt au problème au-dessus.",
+          "🚫 Arrête d’essayer de craquer le code, ça sert à rien.",
+          "😅 Pas encore… Tu peux y arriver !",
+          "🤷‍♂️ Ce code n’existe pas… enfin pas ici.",
+          "🙈 Essaye autre chose, ce n’est pas ça.",
+          "😜 C’est pas le bon code, mais continue d’essayer !",
+          "💡 Conseil : lis bien les instructions avant de taper.",
+        ];
+
+        function checkCode() {
+          const code = document.getElementById("accessCode").value;
+          const message = document.getElementById("message");
+
+          if (code === "GPS2025") {
+            // 👉 remplace "GPS2025" par le code que tu veux
+            window.location.href = "Exercice Bonus GPS correction.html";
+          } else {
+            const randomIndex = Math.floor(
+              Math.random() * errorMessages.length
+            );
+            message.textContent = errorMessages[randomIndex];
+            message.style.color = "red";
+          }
+        }
+      </script>
+    </div>
+
+    <footer>
+      <span>M.KLATT - SNT - Lycée Victor Hugo</span>
+      <a href="chapitre1.html" class="home-btn"
+        ><i class="fas fa-arrow-left"></i
+      ></a>
+    </footer>
+  </body>
+</html>

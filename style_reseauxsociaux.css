@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../images/reseaux-sociaux.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 60px; /* même hauteur que le footer */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #9b27b0;
+}
+
+.info-box {
+  background: #9b27b097;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.themes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.theme-card {
+  background: #9b27b0a4;
+  color: white;
+  width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.theme-card:hover {
+  background-color: #9b27b0eb;
+}
+
+.theme-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Le panneau de consignes spécifiques */
+.theme-details {
+  display: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Affiche les détails quand on ajoute la classe "active" */
+.theme-card.active .theme-details {
+  display: block;
+}
+
+.theme {
+  display: flex;
+  flex-direction: column; /* texte en dessous de l'icône */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px; /* espace intérieur pour éviter que le texte colle aux bords */
+  text-align: center; /* centre le texte sur plusieurs lignes */
+}
+
+.theme i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.theme:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Couleurs différentes pour chaque carré */
+.theme1 {
+  background: #ff6f61;
+} /* rouge/orange */
+.theme2 {
+  background: #4caf50;
+} /* vert */
+.theme3 {
+  background: #2196f3;
+} /* bleu */
+.theme4 {
+  background: #ff9800;
+} /* orange */
+.theme5 {
+  background: #9c27b0;
+} /* violet */
+.theme6 {
+  background: #00bcd4;
+} /* turquoise */
+.theme7 {
+  background: #795548;
+} /* marron */
+
+.page-footer {
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  position: fixed; /* reste en bas de l'écran */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Exemple si tu veux un footer spécial pour la page d'accueil */
+.theme0 {
+  background-color: #222; /* couleur unique accueil */
+}
+
+.home-icon {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  right: 0; /* pousse l'icône complètement à droite */
+}
+
+.home-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Se repérer sur Terre</title>
+    <link rel="stylesheet" href="css/style-se-positionner.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Se repérer sur Terre</h1>
+    </header>
+
+    <main>
+      <section class="objectif">
+        <h2>Objectif</h2>
+        <p>
+          Comprendre comment se repérer sur Terre à l'aide du système de
+          coordonnées géographiques (latitude, longitude) et des outils
+          numériques.
+        </p>
+        <p>
+          Savoir convertir des coordonnées du format décimal (DD) vers le format
+          sexagésimal (DMS) et inversement.
+        </p>
+        <p>
+          Utiliser Google Earth pour rechercher un lieu, placer des repères,
+          mesurer des distances et exporter un parcours.
+        </p>
+      </section>
+
+      <section class="contenus">
+        <h2>Contenus</h2>
+        <ul>
+          <li>
+            Définition de la <em>latitude</em> et de la <em>longitude</em>.
+          </li>
+          <li>
+            Formats d'écriture :
+            <ul>
+              <li>
+                Degrés décimaux (DD) : <code>lat, lon</code> — exemple :
+                <code>43.6045, 1.4440</code>
+              </li>
+              <li>
+                Degrés / minutes / secondes (DMS) :
+                <code>43°36'16.2" N, 1°26'38.4" E</code>
+              </li>
+              <li>
+                Degrés / minutes décimales (DM) :
+                <code>43°36.270' N, 1°26.640' E</code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Repères de sens : N/S pour la latitude, E/O (E/W) pour la longitude.
+          </li>
+          <li>Référentiel courant : WGS84 (utilisé par le GPS).</li>
+          <li>
+            Conversion DD ⇄ DMS :
+            <ul>
+              <li>
+                <strong>DD → DMS</strong> : degrés = partie entière ; minutes =
+                partie décimale × 60 ; secondes = reste × 60.
+              </li>
+              <li>
+                <strong>DMS → DD</strong> : DD = degrés + minutes/60 +
+                secondes/3600 (signe selon N/S/E/O).
+              </li>
+            </ul>
+          </li>
+          <li>
+            Google Earth : recherche, ajout de repères, tracés, mesures,
+            import/export <code>.KML</code>/<code>.KMZ</code>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="activites">
+        <h2>Activités proposées</h2>
+        <ul>
+          <li>
+            Convertir une liste de coordonnées du format DD vers DMS (et
+            inversement) et vérifier la cohérence des hémisphères (N/S, E/O).
+          </li>
+          <li>
+            Localiser des points donnés dans Google Earth Web, ajouter un repère
+            pour chacun et renseigner leurs coordonnées dans les deux formats.
+          </li>
+          <!-- <li>
+            Tracer un itinéraire simple entre deux repères et mesurer la
+            distance. Exporter le tracé au format <code>.KML</code>.
+          </li> -->
+          <!-- <li>
+            (Bonus) Relever vos propres coordonnées avec un smartphone, les
+            convertir et comparer avec Google Earth.
+          </li> -->
+        </ul>
+      </section>
+
+      <section class="video">
+        <h2>Activité vidéo</h2>
+        <p>
+          <strong>Consigne :</strong> Visionner les vidéos ci-dessous puis
+          compléter la fiche distribuée par le professeur. La fiche sera
+          ramassée en fin de cours.
+        </p>
+        <a
+          href="../Les documents papiers/Thème 3 - Localisation, cartographie et mobilité/Chapitre 2 - Latitude et longitude.pdf"
+          target="_blank"
+          >Ouvrir le PDF : Se repérer sur Terre</a
+        >
+        <br />
+        <a
+          class="video-link"
+          href="https://www.youtube.com/watch?v=GNbVEivQpVQ"
+          target="_blank"
+          >▶ Voir la vidéo YouTube : Comment se repérer sur une sphère</a
+        >
+        <br />
+      </section>
+      <section class="video">
+        <h2>Google Earth - mesurer l'altitude d'un lieu</h2>
+        <p>
+          ▶ Voir le tutoriel rapide Google Earth (pour la dernière question de
+          la fiche):
+          <a href="Images/Tuto Google Earth.png" target="_blank">
+            Ouvrir l'image
+          </a>
+        </p>
+
+        <br />
+        <a
+          class="video-link"
+          href="https://earth.google.com/web/"
+          target="_blank"
+          >▶ Ouvrir Google Earth Web</a
+        >
+      </section>
+    </main>
+
+    <div class="gif-container">
+      <img
+        src="Images/Earth.gif"
+        alt="Animation Google Earth"
+        class="gif-anim"
+      />
+    </div>
+
+    <footer>
+      <span>M.KLATT - SNT - Lycée Victor Hugo</span>
+      <a
+        href="Thème 1 - Géolocalisation.html"
+        class="home-btn"
+        aria-label="Accueil"
+      >
+        <i class="fas fa-home" aria-hidden="true"></i>
+      </a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url(../Images/binaire.jpg) no-repeat center center fixed;
+  background-size: cover; /* fait en sorte que l'image couvre toute la zone */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 30px;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
+    2px 2px 0 #ffffff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  flex: 1;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 200px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.chapter i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.chapter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Couleurs par chapitre */
+.chapter1 {
+  background: #4caf50;
+}
+.chapter2 {
+  background: #2196f3;
+}
+.chapter3 {
+  background: #ff9800;
+}
+
+/* Footer */
+footer {
+  background: #2196f3;
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+}
+
+.home-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.home-button:hover {
+  color: #ddd;
+}

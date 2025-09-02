@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url(../Images/wallpaperaccueil.webp) no-repeat center center fixed;
+  background-size: cover; /* fait en sorte que l'image couvre toute la zone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: 60px; /* même hauteur que le footer */
+}
+
+h1.snt-title {
+  text-align: center;
+  color: white;
+  font-size: 15rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, -1px);
+  }
+  30% {
+    transform: translate(-2px, 1px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(1px, -2px);
+  }
+  70% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(2px, 1px);
+  }
+  90% {
+    transform: translate(-2px, 1px);
+  }
+}
+
+h1:hover {
+  animation: shake 0.5s infinite;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.theme {
+  display: flex;
+  flex-direction: column; /* texte en dessous de l'icône */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px; /* espace intérieur pour éviter que le texte colle aux bords */
+  text-align: center; /* centre le texte sur plusieurs lignes */
+}
+
+.theme i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.theme:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Couleurs différentes pour chaque carré */
+.theme1 {
+  background: #ff6f61;
+} /* rouge/orange */
+.theme2 {
+  background: #4caf50;
+} /* vert */
+.theme3 {
+  background: #2196f3;
+} /* bleu */
+.theme4 {
+  background: #ff9800;
+} /* orange */
+.theme5 {
+  background: #9c27b0;
+} /* violet */
+.theme6 {
+  background: #00bcd4;
+} /* turquoise */
+.theme7 {
+  background: #795548;
+} /* marron */
+
+.page-footer {
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  position: fixed; /* reste en bas de l'écran */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Exemple si tu veux un footer spécial pour la page d'accueil */
+.theme0 {
+  background-color: #222; /* couleur unique accueil */
+}
+
+.home-icon {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  right: 0; /* pousse l'icône complètement à droite */
+}
+
+.home-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+#bird {
+  position: fixed;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+/* Battement d'ailes */
+.wing {
+  animation: wingFlap 0.5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes wingFlap {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espace entre la mascotte et le titre */
+  padding: 20px;
+}
+
+.mascotte-container {
+  position: absolute;
+  top: 25%; /* Distance par rapport au bord supérieur de la page */
+  left: 15%; /* Distance par rapport au bord gauche de la page */
+  z-index: 100; /* Assure que la mascotte reste au-dessus des autres éléments */
+}
+
+.mascotte-image {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.mascotte-bulle {
+  position: absolute;
+  bottom: 50%;
+  left: 200%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 15px;
+  width: 250px;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  margin-bottom: 10px;
+}
+
+.mascotte-container:hover .mascotte-bulle {
+  visibility: visible;
+  opacity: 1;
+}
